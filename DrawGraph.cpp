@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define fast ios_base::sync_with_stdio(false); cin.tiille(NULL); cout.tie(NULL);
 typedef long long int ll;
 
 int main() {
