@@ -1,24 +1,24 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 #define fast ios_base::sync_with_stdio(false); cin.tiille(NULL); cout.tie(NULL);
 typedef long long int ll;
 
 int main() {
 
-    ll n,mm = 0;
+    ll n,mm = 0, sumOfElements = 0;
     cin >> n;
     vector<ll> a(n+5);
     ll sum = 0;
     for(ll i = 0; i < n; i++) {
         cin >> a[i];
+        sumOfElements += a[i];
         if(i%2 == 0) sum += a[i];
         else sum -= a[i];
 
         mm = max(mm , sum);
     }
 
-    vector<vector<char>> grid(mm+5, vector<char>(1000));
+    vector<vector<char>> grid(mm+5, vector<char>(sumOfElements+5));
 
     ll x = mm+3;
     ll y = 0;
@@ -60,7 +60,7 @@ int main() {
     }
 
     for(ll i = 0; i <= mm+3; i++){
-        for(ll j = 0; j < 1000; j++){
+        for(ll j = 0; j < sumOfElements+5; j++){
             if(grid[i][j] != '/' && grid[i][j] != '\\' && grid[i][j] != '<' && grid[i][j] != '>' && grid[i][j] != '|' && grid[i][j] != 'o' ) cout << " ";
             else cout << grid[i][j];
         }
