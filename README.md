@@ -1,2 +1,2 @@
 # Cpp-Codes
-Random C++ codes which I have coded
+Random codes which I have coded
